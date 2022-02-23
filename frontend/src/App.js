@@ -14,7 +14,7 @@ import PlaceOrderScreen from './screens/PlaceOrderScreen'
 import OrderScreen from './screens/OrderScreen'
 import UserListScreen from './screens/UserListScreen'
 import UserEditScreen from './screens/UserEditScreen'
-import trainerListScreen from './screens/TrainerListScreen'
+import TrainerListScreen from './screens/TrainerListScreen'
 import TrainerEditScreen from './screens/TrainerEditScreen'
 import OrderListScreen from './screens/OrderListScreen'
 

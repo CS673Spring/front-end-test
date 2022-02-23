@@ -32,7 +32,7 @@ import {
 } from '../constants/trainerConstants'
 
 
-export const listProducts = (keyword = '') => async (dispatch) => {
+export const listTrainers = (keyword = '') => async (dispatch) => {
     try {
         dispatch({ type: TRAINER_LIST_REQUEST })
 
@@ -53,7 +53,7 @@ export const listProducts = (keyword = '') => async (dispatch) => {
     }
 }
 
-export const listTopProducts = () => async (dispatch) => {
+export const listTopTrainers = () => async (dispatch) => {
     try {
         dispatch({ type: TRAINER_TOP_REQUEST })
 
@@ -75,7 +75,7 @@ export const listTopProducts = () => async (dispatch) => {
 }
 
 
-export const listProductDetails = (id) => async (dispatch) => {
+export const listTrainerDetails = (id) => async (dispatch) => {
     try {
         dispatch({ type: TRAINER_DETAILS_REQUEST })
 
@@ -97,7 +97,7 @@ export const listProductDetails = (id) => async (dispatch) => {
 }
 
 
-export const deleteProduct = (id) => async (dispatch, getState) => {
+export const deleteTrainer = (id) => async (dispatch, getState) => {
     try {
         dispatch({
             type: TRAINER_DELETE_REQUEST
@@ -137,7 +137,7 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
 
 
 
-export const createProduct = () => async (dispatch, getState) => {
+export const createTrainer = () => async (dispatch, getState) => {
     try {
         dispatch({
             type: TRAINER_CREATE_REQUEST
@@ -177,7 +177,7 @@ export const createProduct = () => async (dispatch, getState) => {
 
 
 
-export const updateProduct = (trainer) => async (dispatch, getState) => {
+export const updateTrainer = (trainer) => async (dispatch, getState) => {
     try {
         dispatch({
             type: TRAINER_UPDATE_REQUEST
@@ -221,7 +221,7 @@ export const updateProduct = (trainer) => async (dispatch, getState) => {
     }
 }
 
-export const createProductReview = (trainerId, review) => async (dispatch, getState) => {
+export const createTrainerReview = (trainerId, review) => async (dispatch, getState) => {
     try {
         dispatch({
             type: TRAINER_CREATE_REVIEW_REQUEST

@@ -6,7 +6,7 @@ import Rating from '../components/Rating'
 import Loader from '../components/Loader'
 import Message from '../components/Message'
 import { listTrainerDetails, createTrainerReview } from '../actions/trainerActions'
-import { PRODUCT_CREATE_REVIEW_RESET } from '../constants/trainerConstants'
+import { TRAINER_CREATE_REVIEW_RESET } from '../constants/trainerConstants'
 
 function TrainerScreen({ match, history }) {
     const [qty, setQty] = useState(1)
@@ -32,7 +32,7 @@ function TrainerScreen({ match, history }) {
         if (successTrainerReview) {
             setRating(0)
             setComment('')
-            dispatch({ type: PRODUCT_CREATE_REVIEW_RESET })
+            dispatch({ type: TRAINER_CREATE_REVIEW_RESET })
         }
 
         dispatch(listTrainerDetails(match.params.id))

@@ -7,7 +7,7 @@ import Loader from '../components/Loader'
 import Message from '../components/Message'
 import FormContainer from '../components/FormContainer'
 import { listTrainerDetails, updateTrainer } from '../actions/trainerActions'
-import { PRODUCT_UPDATE_RESET } from '../constants/trainerConstants'
+import { TRAINER_UPDATE_RESET } from '../constants/trainerConstants'
 
 
 function TrainerEditScreen({ match, history }) {
@@ -35,7 +35,7 @@ function TrainerEditScreen({ match, history }) {
     useEffect(() => {
 
         if (successUpdate) {
-            dispatch({ type: PRODUCT_UPDATE_RESET })
+            dispatch({ type: TRAINER_UPDATE_RESET })
             history.push('/admin/trainerlist')
         } else {
             if (!trainer.name || trainer._id !== Number(trainerId)) {

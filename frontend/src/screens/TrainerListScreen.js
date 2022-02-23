@@ -6,7 +6,7 @@ import Loader from '../components/Loader'
 import Message from '../components/Message'
 import Paginate from '../components/Paginate'
 import { listTrainers, deleteTrainer, createTrainer } from '../actions/trainerActions'
-import { PRODUCT_CREATE_RESET } from '../constants/trainerConstants'
+import { TRAINER_CREATE_RESET } from '../constants/trainerConstants'
 
 function TrainerListScreen({ history, match }) {
 
@@ -27,7 +27,7 @@ function TrainerListScreen({ history, match }) {
 
     let keyword = history.location.search
     useEffect(() => {
-        dispatch({ type: PRODUCT_CREATE_RESET })
+        dispatch({ type: TRAINER_CREATE_RESET })
 
         if (!userInfo.isAdmin) {
             history.push('/login')
