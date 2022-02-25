@@ -64,14 +64,18 @@ function TrainerScreen({ match, history }) {
                         <div>
                             <Row>
                                 <Col md={6}>
-                                    <Image src={trainer.image} alt={trainer.name} fluid />
+                                    <Image src={trainer.image} alt={trainer.firstName} fluid />
                                 </Col>
 
 
                                 <Col md={3}>
                                     <ListGroup variant="flush">
                                         <ListGroup.Item>
-                                            <h3>{trainer.name}</h3>
+                                            <h3>{trainer.first_name}</h3>
+                                        </ListGroup.Item>
+
+                                        <ListGroup.Item>
+                                            <h3>{trainer.last_name}</h3>
                                         </ListGroup.Item>
 
                                         <ListGroup.Item>

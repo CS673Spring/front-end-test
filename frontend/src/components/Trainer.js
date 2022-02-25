@@ -13,7 +13,7 @@ function Trainer({ trainer }) {
             <Card.Body>
                 <Link to={`/trainer/${trainer._id}`}>
                     <Card.Title as="div">
-                        <strong>{trainer.name}</strong>
+                        <strong>{trainer.firstName} {trainer.lastName}</strong>
                     </Card.Title>
                 </Link>
 

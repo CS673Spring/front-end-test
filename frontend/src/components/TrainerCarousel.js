@@ -26,7 +26,8 @@ function TrainerCarousel() {
                             <Link to={`/trainer/${trainer._id}`}>
                                 <Image src={trainer.image} alt={trainer.name} fluid />
                                 <Carousel.Caption className='carousel.caption'>
-                                    <h4>{trainer.name} (${trainer.price})</h4>
+                                    <h4>{trainer.firstName} (${trainer.lastName})</h4>
+                                    <h4>{trainer.price}</h4>
                                 </Carousel.Caption>
                             </Link>
                         </Carousel.Item>

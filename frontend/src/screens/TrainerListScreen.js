@@ -84,11 +84,11 @@ function TrainerListScreen({ history, match }) {
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>NAME</th>
+                                        <th>FIRST NAME</th>
+                                        <th>LAST NAME</th>
                                         <th>PRICE</th>
                                         <th>CATEGORY</th>
-                                        <th>BRAND</th>
-                                        <th></th>
+                                        <th>TRAINING STYLE</th>
                                     </tr>
                                 </thead>
 
@@ -96,10 +96,11 @@ function TrainerListScreen({ history, match }) {
                                     {trainers.map(trainer => (
                                         <tr key={trainer._id}>
                                             <td>{trainer._id}</td>
-                                            <td>{trainer.name}</td>
+                                            <td>{trainer.first_name}</td>
+                                            <td>{trainer.last_name}</td>
                                             <td>${trainer.price}</td>
                                             <td>{trainer.category}</td>
-                                            <td>{trainer.brand}</td>
+                                            <td>{trainer.training_style}</td>
 
                                             <td>
                                                 <LinkContainer to={`/admin/trainer/${trainer._id}/edit`}>

@@ -14,10 +14,11 @@ function TrainerEditScreen({ match, history }) {
 
     const trainerId = match.params.id
 
-    const [name, setName] = useState('')
+    const [first_name, setFirstName] = useState('')
+    const [last_name, setLastName] = useState('')
     const [price, setPrice] = useState(0)
     const [image, setImage] = useState('')
-    const [brand, setBrand] = useState('')
+    const [training, setTraining] = useState('')
     const [category, setCategory] = useState('')
     const [countInStock, setCountInStock] = useState(0)
     const [description, setDescription] = useState('')
@@ -38,13 +39,14 @@ function TrainerEditScreen({ match, history }) {
             dispatch({ type: TRAINER_UPDATE_RESET })
             history.push('/admin/trainerlist')
         } else {
-            if (!trainer.name || trainer._id !== Number(trainerId)) {
+            if (!trainer.first_name || !trainer.last_name || trainer._id !== Number(trainerId)) {
                 dispatch(listTrainerDetails(trainerId))
             } else {
-                setName(trainer.name)
+                setFirstName(trainer.first_name)
+                setLastName(trainer.last_name)
                 setPrice(trainer.price)
                 setImage(trainer.image)
-                setBrand(trainer.brand)
+                setTraining(trainer.training)
                 setCategory(trainer.category)
                 setCountInStock(trainer.countInStock)
                 setDescription(trainer.description)
@@ -60,10 +62,11 @@ function TrainerEditScreen({ match, history }) {
         e.preventDefault()
         dispatch(updateTrainer({
             _id: trainerId,
-            name,
+            first_name,
+            last_name,
             price,
             image,
-            brand,
+            training,
             category,
             countInStock,
             description
@@ -112,14 +115,26 @@ function TrainerEditScreen({ match, history }) {
                     : (
                         <Form onSubmit={submitHandler}>
 
-                            <Form.Group controlId='name'>
-                                <Form.Label>Name</Form.Label>
+                            <Form.Group controlId='first_name'>
+                                <Form.Label>FIRST NAME</Form.Label>
                                 <Form.Control
 
                                     type='name'
-                                    placeholder='Enter name'
-                                    value={name}
-                                    onChange={(e) => setName(e.target.value)}
+                                    placeholder='Enter first name'
+                                    value={first_name}
+                                    onChange={(e) => setFirstName(e.target.value)}
+                                >
+                                </Form.Control>
+                            </Form.Group>
+
+                            <Form.Group controlId='first_name'>
+                                <Form.Label>LAST NAME</Form.Label>
+                                <Form.Control
+
+                                    type='name'
+                                    placeholder='Enter last name'
+                                    value={last_name}
+                                    onChange={(e) => setLastName(e.target.value)}
                                 >
                                 </Form.Control>
                             </Form.Group>
@@ -161,14 +176,14 @@ function TrainerEditScreen({ match, history }) {
                             </Form.Group>
 
 
-                            <Form.Group controlId='brand'>
-                                <Form.Label>Brand</Form.Label>
+                            <Form.Group controlId='training'>
+                                <Form.Label>Training</Form.Label>
                                 <Form.Control
 
                                     type='text'
-                                    placeholder='Enter brand'
-                                    value={brand}
-                                    onChange={(e) => setBrand(e.target.value)}
+                                    placeholder='Enter training'
+                                    value={training}
+                                    onChange={(e) => setTraining(e.target.value)}
                                 >
                                 </Form.Control>
                             </Form.Group>

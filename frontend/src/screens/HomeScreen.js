@@ -35,7 +35,7 @@ function HomeScreen({ history }) {
                                 <Col key={trainer._id} sm={12} md={6} lg={4} xl={3}>
                                     <Trainer trainer={trainer} />
                                 </Col>
-                            ))}
+                            ))};
                         </Row>
                         <Paginate page={page} pages={pages} keyword={keyword} />
                     </div>
